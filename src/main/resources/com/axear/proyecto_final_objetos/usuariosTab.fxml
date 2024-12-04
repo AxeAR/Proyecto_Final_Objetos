@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.axear.proyecto_final_objetos.Controllers.UsuariosController">
+   <children>
+        <AnchorPane>
+               <children>
+                   <GridPane hgap="10" layoutX="20" layoutY="20" vgap="10">
+                       <padding>
+                           <Insets bottom="10" left="10" right="10" top="10" />
+                       </padding>
+                       <children>
+                           <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                           <TextField fx:id="nombreField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+   
+                           <Label text="Apellido Paterno:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                           <TextField fx:id="apaternoField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+   
+                           <Label text="Apellido Materno:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                           <TextField fx:id="amaternoField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   
+                           <Label text="Direccion:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                           <TextField fx:id="direccionField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+   
+                           <Label text="Telefono:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                           <TextField fx:id="telefonoField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+   
+                           <Label text="E-mail:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                           <TextField fx:id="emailField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+   
+                           <Label text="Fecha de Registro:" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                           <DatePicker fx:id="fechaRegistroPicker" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                           <HBox spacing="10" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="7">
+                               <children>
+                                   <Button onAction="#agregarUsuario" fx:id="agregarButton" text="Agregar" />
+                                   <Button onAction="#eliminarUsuario" disable="true" fx:id="eliminarButton" text="Eliminar" />
+                                   <Button onAction="#actualizarUsuario" disable="true" fx:id="actualizarButton" text="Actualizar" />
+                               </children>
+                           </HBox>
+                       </children>
+                       <columnConstraints>
+                           <ColumnConstraints />
+                           <ColumnConstraints />
+                       </columnConstraints>
+                       <rowConstraints>
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                           <RowConstraints />
+                       </rowConstraints>
+                   </GridPane>
+
+                   <TableView fx:id="userTable" layoutX="350" layoutY="20" prefHeight="400" prefWidth="875">
+                       <columns>
+                           <TableColumn fx:id="nombreColumn" prefWidth="100" text="Nombre" />
+                           <TableColumn fx:id="apaternoColumn" prefWidth="120" text="Apellido Paterno" />
+                           <TableColumn fx:id="amaternoColumn" prefWidth="120" text="Apellido Materno" />
+                           <TableColumn fx:id="direccionColumn" prefWidth="150" text="Direccion" />
+                           <TableColumn fx:id="telefonoColumn" prefWidth="100" text="Telefono" />
+                           <TableColumn fx:id="emailColumn" prefWidth="150" text="E-mail" />
+                           <TableColumn fx:id="fechaRegistroColumn" prefWidth="120" text="Fecha de Registro" />
+                       </columns>
+                   </TableView>
+               </children>
+           </AnchorPane>
+   </children>
+
+</AnchorPane>

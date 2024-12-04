@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.axear.proyecto_final_objetos.Controllers.LibrosController">
+    <children>
+        <AnchorPane>
+            <children>
+                <GridPane hgap="10" layoutX="20" layoutY="20" vgap="10">
+                    <padding>
+                        <Insets bottom="10" left="10" right="10" top="10" />
+                    </padding>
+                    <children>
+                        <Label text="Título:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="tituloField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label text="Autor:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="autorComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <Label text="Editorial:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="editorialComboBox" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                        <Label text="Año de Publicación:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <DatePicker fx:id="anioPublicacionPicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                        <Label text="ISBN:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <TextField fx:id="isbnField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                        <HBox spacing="10" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="5">
+                            <children>
+                                <Button onAction="#agregarLibro" fx:id="agregarButton" text="Agregar" />
+                                <Button onAction="#eliminarLibro" disable="true" fx:id="eliminarButton" text="Eliminar" />
+                                <Button onAction="#actualizarLibro" disable="true" fx:id="actualizarButton" text="Actualizar" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+
+                <TableView fx:id="libroTable" layoutX="350" layoutY="20" prefHeight="400" prefWidth="875">
+                    <columns>
+                        <TableColumn fx:id="tituloColumn" prefWidth="150" text="Título" />
+                        <TableColumn fx:id="autorColumn" prefWidth="100" text="Autor" />
+                        <TableColumn fx:id="editorialColumn" prefWidth="100" text="Editorial" />
+                        <TableColumn fx:id="anioPublicacionColumn" prefWidth="120" text="Año de Publicación" />
+                        <TableColumn fx:id="disponibleColumn" prefWidth="100" text="Disponible" />
+                        <TableColumn fx:id="isbnColumn" prefWidth="150" text="ISBN" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

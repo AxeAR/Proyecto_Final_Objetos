@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.axear.proyecto_final_objetos.Controllers.PrestamosController">
+    <children>
+        <GridPane hgap="10" layoutX="20" layoutY="20" vgap="10">
+            <padding>
+                <Insets bottom="10" left="10" right="10" top="10" />
+            </padding>
+            <children>
+                <Label text="Usuario:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <ComboBox fx:id="usuarioComboBox" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Libro:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <ComboBox fx:id="libroComboBox" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Fecha de Préstamo:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <DatePicker fx:id="fechaPrestamoPicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Fecha de Devolución:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <DatePicker fx:id="fechaDevolucionPicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                <Label text="Estado:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                <ComboBox fx:id="estadoComboBox" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                <Label text="ID Préstamo:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                <TextField fx:id="idPrestamoField" GridPane.columnIndex="1" GridPane.rowIndex="5" disable="true" />
+
+                <HBox spacing="10" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="6">
+                    <children>
+                        <Button onAction="#agregarPrestamo" fx:id="agregarButton" text="Agregar" />
+                        <Button onAction="#eliminarPrestamo" disable="true" fx:id="eliminarButton" text="Eliminar" />
+                        <Button onAction="#actualizarPrestamo" disable="true" fx:id="actualizarButton" text="Actualizar" />
+                    </children>
+                </HBox>
+            </children>
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+
+        <TableView fx:id="prestamoTable" layoutX="350" layoutY="20" prefHeight="400" prefWidth="875">
+            <columns>
+                <TableColumn fx:id="idPrestamoColumn" prefWidth="100" text="ID Préstamo" />
+                <TableColumn fx:id="idUsuarioColumn" prefWidth="120" text="Usuario" />
+                <TableColumn fx:id="idLibroColumn" prefWidth="120" text="Libro" />
+                <TableColumn fx:id="fechaPrestamoColumn" prefWidth="150" text="Fecha de Préstamo" />
+                <TableColumn fx:id="fechaDevolucionColumn" prefWidth="100" text="Fecha de Devolución" />
+                <TableColumn fx:id="estadoColumn" prefWidth="150" text="Estado" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

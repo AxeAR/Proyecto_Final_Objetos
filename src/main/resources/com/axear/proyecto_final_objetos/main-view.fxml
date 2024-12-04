@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.StackPane?>
+
+<TabPane fx:id="tabPane" xmlns:fx="http://javafx.com/fxml/1" tabClosingPolicy="UNAVAILABLE" fx:controller="com.axear.proyecto_final_objetos.Controllers.MainController">
+    <tabs>
+        <Tab fx:id="usuariosTab" text="Usuarios">
+            <content>
+                <StackPane fx:id="usuariosTabContent"/>
+            </content>
+        </Tab>
+        <Tab fx:id="librosTab" text="Libros">
+            <content>
+                <StackPane fx:id="librosTabContent"/>
+            </content>
+        </Tab>
+        <Tab fx:id="autoresTab" text="Autores">
+            <content>
+                <StackPane fx:id="autoresTabContent"/>
+            </content>
+        </Tab>
+        <Tab fx:id="categoriasTab" text="Categorias">
+            <content>
+                <StackPane fx:id="categoriasTabContent"/>
+            </content>
+        </Tab>
+        <Tab fx:id="editorialesTab" text="Editoriales">
+            <content>
+                <StackPane fx:id="editorialesTabContent"/>
+            </content>
+        </Tab>
+        <Tab fx:id="prestamosTab" text="Prestamos">
+            <content>
+                <StackPane fx:id="prestamosTabContent"/>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>

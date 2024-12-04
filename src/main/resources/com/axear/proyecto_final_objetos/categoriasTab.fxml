@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.axear.proyecto_final_objetos.Controllers.CategoriasController">
+    <children>
+        <AnchorPane>
+            <children>
+                <GridPane hgap="10" layoutX="20" layoutY="20" vgap="10">
+                    <padding>
+                        <Insets bottom="10" left="10" right="10" top="10" />
+                    </padding>
+                    <children>
+                        <Label text="ID Categoría:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="idCategoriaField" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                        <Label text="Descripción:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="descripcionField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                        <HBox spacing="10" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                            <children>
+                                <Button onAction="#agregarCategoria" fx:id="agregarButton" text="Agregar" />
+                                <Button onAction="#eliminarCategoria" disable="true" fx:id="eliminarButton" text="Eliminar" />
+                                <Button onAction="#actualizarCategoria" disable="true" fx:id="actualizarButton" text="Actualizar" />
+                            </children>
+                        </HBox>
+                    </children>
+                    <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+
+                <TableView fx:id="categoriaTable" layoutX="350" layoutY="20" prefHeight="400" prefWidth="400">
+                    <columns>
+                        <TableColumn fx:id="idCategoriaColumn" prefWidth="150" text="ID Categoría" />
+                        <TableColumn fx:id="descripcionColumn" prefWidth="250" text="Descripción" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
